@@ -3,12 +3,10 @@ import styles from "../styles/home.module.css";
 import logo from "../public/logo.png";
 import Image from "next/image";
 import { useMoralis } from "react-moralis";
-import { useRouter } from "next/router";
 import Link from "next/link";
 const ADMIN = "0x847Bc3f097Ba89f3e46FE8Aa05Ae80149C4D89E2";
 let linkAddress;
 export default function Home() {
-  const router = useRouter();
   const { authenticate, authError, isAuthenticated, user, Moralis, logout } =
     useMoralis();
   // if (authError) alert(`${authError.name} ${authError.message}`);
@@ -62,30 +60,16 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.welcome_msg}>
-          <h1>Welcome to EtherX</h1>
+          <h1>
+            ~ Welcome To <span>EtherX</span> ~
+          </h1>
         </div>
         <div className={styles.choose_profile}>
           <div className={styles.profile_investor}>
-            <a
-              className={styles.investorCase}
-              onClick={() => {
-                if (isAuthenticated) router.push("/investor");
-                else alert("Connect wallet first!");
-              }}
-            >
-              I want to Invest
-            </a>
+            <a href="/investor">I want to invest ...</a>
           </div>
           <div className={styles.profile_asker}>
-            <a
-              className={styles.askerCase}
-              onClick={() => {
-                if (isAuthenticated) router.push("/asker");
-                else alert("Connect wallet first!");
-              }}
-            >
-              I want Funding
-            </a>{" "}
+            <a href="/asker">I want funding ...</a>{" "}
           </div>
         </div>
       </div>
