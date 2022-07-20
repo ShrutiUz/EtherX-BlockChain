@@ -29,6 +29,7 @@ export default function Admin() {
   return (
     <div className={styles.bodyClass}>
       <div className={styles.boxWrapper}>
+        <h2>Admin login</h2>
         <input
           type="text"
           value={username}

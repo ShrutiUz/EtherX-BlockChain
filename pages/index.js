@@ -31,7 +31,7 @@ export default function Home() {
         <div className={styles.navbar}>
           <div className={styles.logos}>
             <div>
-              <Image src={logo} alt="EtherX" height="30px" width="30px" />
+              <Image src={logo} alt="EtherX" height="50px" width="45px" />
             </div>
             <div className={styles.dummy}></div>
             <div className={styles.logoName}>EtherX</div>
@@ -68,16 +68,14 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.welcome_msg}>
-          <h1>
-            ~ Welcome To <span>EtherX</span> ~
-          </h1>
+          <h1>Welcome to EtherX</h1>
         </div>
         <div className={styles.choose_profile}>
           <div className={styles.profile_investor}>
-            <a onClick={handleClickInvestor}>I want to invest ...</a>
+            <a onClick={handleClickInvestor}>I want to invest</a>
           </div>
           <div className={styles.profile_asker}>
-            <a onClick={handleClickAsker}>I want funding ...</a>
+            <a onClick={handleClickAsker}>I want funding</a>
           </div>
         </div>
       </div>

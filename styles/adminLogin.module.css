@@ -1,33 +1,45 @@
-.boxWrapper{
-    height: 300px;
-    width:300px;
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 23%, rgba(0,212,255,1) 100%);
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    flex-direction: column;
-    border-radius: 8px;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500&display=swap");
+
+.boxWrapper {
+  height: 380px;
+  width: 380px;
+  background: #3f4e4f;
+  /* background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 23%, rgba(0,212,255,1) 100%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
 }
-.boxWrapper input{
-    background-color: rgb(207, 194, 194);
-    border-radius: 0.2rem;
-    padding: 0.3rem;
-    outline: none;
+
+.boxWrapper h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  margin-bottom: 30px;
+  color: white;
 }
-.dummy{
-    margin: 2vh 0;
+
+.boxWrapper input {
+  background-color: white;
+  border-radius: 0.2rem;
+  padding: 0.3rem;
+  outline: none;
 }
-.bodyClass{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dummy {
+  margin: 2vh 0;
 }
-.boxWrapper button{
-    background-color: rgb(162, 231, 208);
-    padding: 0.3rem 0.5rem;
-    border-radius: 1rem;
-    font-family: sans-serif;
+.bodyClass {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dcd7c9;
+}
+.boxWrapper button {
+  background-color: #e4dccf;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.4rem;
+  font-family: sans-serif;
 }
