@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import styles from "../styles/investor.module.css";
@@ -88,5 +89,15 @@ export default function Investor() {
           : `No requests yet!`}
       </div>
     </div>
+=======
+import styles from "../styles/investor.module.css";
+import { useState } from "react";
+
+export default function Investor() {
+  return (
+    <>
+      <div></div>
+    </>
+>>>>>>> 544784d68f66efc2917e7c7f4c784eb947d70a07
   );
 }

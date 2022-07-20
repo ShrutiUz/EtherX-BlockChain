@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import styles from "../styles/askerForm.module.css";
 import { useMoralis } from "react-moralis";
 import { useEffect, useState } from "react";
@@ -31,16 +32,40 @@ export default function Asker() {
     router.push("/");
   };
   const handleInputChange = (e) => {
+=======
+import { useState } from "react";
+import styles from "../styles/asker.module.css";
+import hasEthereum from "../utils/ethereum";
+
+export default function Asker() {
+  const initialValues = {
+    name: "",
+    description: "",
+    target: "",
+    deadline: "",
+    profitPercentage: "",
+    boolean: "",
+  };
+
+  const [values, setValues] = useState(initialValues);
+
+  const handleChange = (e) => {
+>>>>>>> 544784d68f66efc2917e7c7f4c784eb947d70a07
     const { name, value } = e.target;
     setValues({
       ...values,
       [name]: value,
     });
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 544784d68f66efc2917e7c7f4c784eb947d70a07
   const handleClick = (e) => {
     e.preventDefault();
     console.log(values);
     createFundRequest();
+<<<<<<< HEAD
     setValues(initialValues);
     // setTimeout(() => {
     //   router.push("/");
@@ -104,10 +129,18 @@ export default function Asker() {
     setAmount(values.target);
     // alert("Fund request created!");
     // router.push("/");
+=======
+  };
+
+  async function createFundRequest() {
+    if (!hasEthereum) {
+    }
+>>>>>>> 544784d68f66efc2917e7c7f4c784eb947d70a07
   }
 
   return (
     <>
+<<<<<<< HEAD
       <div className={styles.bodyClass}>
         <div className={styles.askerDetailsMaster}>
           <div className={styles.backBtn}>
@@ -203,6 +236,73 @@ export default function Asker() {
             Create Fund Request
           </button>
         </div>
+=======
+      <div className={styles.master}>
+        <div className={styles.card}>
+          <div className={styles.heading}>
+            <h2>Create Fund Request</h2>
+          </div>
+          <div className={styles.form}>
+            <input
+              type="text"
+              id="askerName"
+              placeholder="Name"
+              name="name"
+              value={values.name}
+              onChange={handleChange}
+              autoComplete="off"
+            />
+            <div className={styles.dummy}></div>
+            <textarea
+              placeholder="Description"
+              rows="3"
+              name="description"
+              value={values.description}
+              onChange={handleChange}
+            />
+            <div className={styles.dummy}></div>
+            <input
+              type="number"
+              id="askerTarget"
+              placeholder="Target"
+              name="target"
+              value={values.target}
+              onChange={handleChange}
+            />
+            <div className={styles.dummy}></div>
+            <input
+              type="number"
+              id="askerDeadline"
+              placeholder="Deadline"
+              name="deadline"
+              value={values.deadline}
+              onChange={handleChange}
+            />
+            <div className={styles.dummy}></div>
+            <input
+              type="number"
+              id="askerBool"
+              placeholder="Will you accept the raised fund if less than target?"
+              name="boolean"
+              value={values.boolean}
+              onChange={handleChange}
+            />
+            <div className={styles.dummy}></div>
+            <input
+              type="number"
+              id="askerProftPercentage"
+              placeholder="Profit percentage to investor(%)"
+              name="profitPercentage"
+              value={values.profitPercentage}
+              onChange={handleChange}
+            />
+            <div className={styles.dummy}></div>
+            <div>
+              <button onClick={handleClick}>Create</button>
+            </div>
+          </div>
+        </div>
+>>>>>>> 544784d68f66efc2917e7c7f4c784eb947d70a07
       </div>
     </>
   );

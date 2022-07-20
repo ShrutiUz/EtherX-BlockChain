@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500&display=swap");
+=======
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&family=Roboto:wght@100;300&display=swap");
+>>>>>>> 544784d68f66efc2917e7c7f4c784eb947d70a07
 
 .parent_welcome {
   display: flex;
@@ -8,13 +12,24 @@
   justify-content: space-between;
   padding: 3vh 5vh 3vh 3vh;
   background: black;
+<<<<<<< HEAD
   color: white;
   font-size: 1.1srem;
+=======
+  color: rgb(245, 246, 247);
+  font-size: 1.2rem;
+>>>>>>> 544784d68f66efc2917e7c7f4c784eb947d70a07
   font-family: "Montserrat", sans-serif;
   margin-bottom: 5vh;
 }
 .logos {
+<<<<<<< HEAD
   display: flex;
+=======
+  /* width: 100px; */
+  display: flex;
+  /* justify-content: space-around; */
+>>>>>>> 544784d68f66efc2917e7c7f4c784eb947d70a07
   align-items: center;
   margin-left: 1vw;
 }
@@ -25,6 +40,10 @@
 }
 .logos .logoName {
   font-family: "Montserrat", sans-serif;
+<<<<<<< HEAD
+=======
+  font-weight: 300;
+>>>>>>> 544784d68f66efc2917e7c7f4c784eb947d70a07
   font-size: 1.6rem;
   /* margin-left: 5px; */
 }
@@ -55,6 +74,7 @@
 .welcome_msg h1 {
   display: flex;
   justify-content: center;
+<<<<<<< HEAD
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   /* background: -webkit-linear-gradient(
@@ -137,6 +157,64 @@
   background-position: top;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: 80%;
+=======
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.choose_profile {
+  width: 50%;
+  display: block;
+  margin: auto;
+  /* border: 1px black solid; */
+  /* border-radius: 1rem; */
+  height: 60vh;
+  margin-top: 5vh;
+}
+.profile_investor {
+  width: 50%;
+  float: left;
+  /* background-color: blue; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(7, 7, 7, 0.594);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+  background-image: url("../public/investor.png");
+  background-position: top;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 55%;
+}
+.profile_asker {
+  width: 50%;
+  float: right;
+  /* background-color: rgb(255, 0, 179); */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+  background-image: url("../public/asker.png");
+  background-position: top;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 60%;
+}
+/* .investorCase {
+  margin-right: 50px;
+} */
+
+.askerCase {
+  margin-left: 10px;
+>>>>>>> 544784d68f66efc2917e7c7f4c784eb947d70a07
 }
 .choose_profile a {
   transition: 0.5s ease-in-out all;
@@ -146,6 +224,7 @@
 .choose_profile a:hover {
   transform: scale(1.2);
   transition: 0.5s ease-in-out all;
+<<<<<<< HEAD
   cursor: pointer;
 }
 .choose_profile .profile_investor a:hover {
@@ -154,3 +233,8 @@
 .choose_profile .profile_asker a:hover {
   color: rgb(72, 198, 50);
 }
+=======
+  /* font-weight: 100; */
+  cursor: pointer;
+}
+>>>>>>> 544784d68f66efc2917e7c7f4c784eb947d70a07

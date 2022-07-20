@@ -67,6 +67,18 @@ contract CrowdFunding {
         );
         _;
     }
+<<<<<<< HEAD
+=======
+    // struct Request {
+    //     address payable recipientNew;
+    //     uint256 value;
+    //     uint256 totalRaisedAmount;
+    //     bool completed;
+    //     uint256 noOfVoters;
+    //     mapping(address => bool) voters;
+    // }
+    // mapping(uint256 => Request) public requests;
+>>>>>>> 544784d68f66efc2917e7c7f4c784eb947d70a07
 
     modifier onlyManager() {
         require(msg.sender == manager, "Only manager can call this function");
@@ -98,7 +110,7 @@ contract CrowdFunding {
         newAsker.recipient = payable(msg.sender);
         newAsker.target = _target;
         newAsker.percent = _percent;
-        newAsker.deadline = _deadline + block.timestamp;
+        newAsker.deadline = _deadline * 24 * 60 * 60 + block.timestamp;
         newAsker.acceptIfLessThanTarget = _acceptIfLessThanTarget;
         newAsker.contributorsAddress = new address[](0);
         // fundRequests.push(newAsker);
@@ -161,10 +173,49 @@ contract CrowdFunding {
         }
     }
 
+<<<<<<< HEAD
+=======
+    modifier onlyManager() {
+        require(msg.sender == manager, "Only manager can call this function");
+        _;
+    }
+
+    // uint256 numRequests;
+    // mapping(uint256 => bool) indexToCheck;
+    // mapping(uint256 => uint256) indexToNumRequests;
+
+    // function createRequests(uint256 _index) public onlyManager {
+    //     // require(block.timestamp >= askers[_index].deadline,"Time left!!");
+    //     require(!indexToCheck[_index], "Already created a request!");
+    //     indexToNumRequests[_index] = numRequests;
+    //     Request storage newRequest = requests[numRequests];
+    //     numRequests++;
+    //     indexToCheck[_index] = true;
+    //     newRequest.recipientNew = askers[_index].recipient;
+    //     newRequest.totalRaisedAmount = raisedAmount[_index];
+    //     newRequest.value = askers[_index].target;
+    //     newRequest.completed = false;
+    //     newRequest.noOfVoters = 0;
+    // }
+
+    // function voteRequest(uint _index) public {
+    //     mapping(address => uint256)
+    //         storage temp = askerIdxToContributorToAmount[_index];
+    //     require(temp[msg.sender] > 0, "You must be contributor");
+    //     Request storage thisRequest = requests[indexToNumRequests[_index]];
+    //     require(
+    //         thisRequest.voters[msg.sender] == false,
+    //         "You have already voted"
+    //     );
+    //     thisRequest.voters[msg.sender] = true;
+    //     thisRequest.noOfVoters++;
+    // }
+
+>>>>>>> 544784d68f66efc2917e7c7f4c784eb947d70a07
     function makePayment(uint _index) public {
         require(
             block.timestamp > askers[_index].deadline,
-            "Abhi time baki hai! Ruko thoda! "
+            "There is still some time lefft !"
         );
         if (raisedAmount[_index] >= askers[_index].target) {
             askers[_index].recipient.transfer(raisedAmount[_index]);
